@@ -1,0 +1,13 @@
+version: '3.4'
+
+ services:
+   products-api:
+     build:
+       context: .
+       dockerfile: ProductsAPI/Dockerfile
+   gateway-api:
+     build:
+       context: .
+       dockerfile: GatewayAPI/Dockerfile
+     ports: 
+         - "5001:80"
